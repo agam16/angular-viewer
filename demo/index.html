@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Angular Viewer Directive</title>
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="../src/css/angular.viewer.css">
+</head>
+
+<body>
+    <div class="jumbotron">
+        <div class="container">
+            <h2>
+                <a target="_blank" href="https://github.com/brantwills/Angular-Paging">
+                    Angular Viewer
+                </a>
+            </h2> A directive to aid in paging large datasets while requiring the bare minimum of actual paging information. We are very dependant on the server for "filtering" results in this paging scheme. The central idea being we only want to hold the active "page" of items - rather than holding the entire list of items in memory and paging on the client-side.
+        </div>
+    </div>
+    <div class="container" ng-app="myApp" ng-controller="exampleCtrl as example">
+        <!--[if lt IE 10]>
+            <div class="alert alert-warning">
+               <strong>
+                    It is highly recommended you update Internet Explorer or try using a modern browser!
+               </strong> 
+            </div>
+        <![endif]-->
+        <h3> Basic Sample </h3>
+        <div class="well">
+            <i-viewer viewer-options = "example.options" viewer-file = "example.imageUrl"></i-viewer>
+        </div>
+        <script src="../bower_components/angular/angular.js"></script>
+        <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../bower_components/jquery-ui/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../bower_components/jquery-mousewheel/jquery.mousewheel.min.js" ></script>
+        <script src="../src/jquery.iviewer.js"></script>
+         <script src="../src/angular-viewer.js"></script>
+         <script src="app.js"></script>
+</body>
+</html>

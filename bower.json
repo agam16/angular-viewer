@@ -1,0 +1,29 @@
+{
+  "name": "angular_viewer",
+  "authors": [
+    "agam <agam@girnarsoft.com>"
+  ],
+  "description": "Angular version of the jQuery iViewer",
+  "main": "dist/angular-viewer.js",
+  "keywords": [
+    "angular",
+    "viewer",
+    "pdfviewer",
+    "imageviewer"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/agam16/angular-viewer",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.2.0",
+    "jquery": "^3.2.1",
+    "jquery-ui": "^1.12.1",
+    "jquery-mousewheel": "^3.1.13"
+  }
+}
