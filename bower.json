@@ -25,6 +25,6 @@
     "jquery": "^3.2.1",
     "jquery-ui": "^1.12.1",
     "jquery-mousewheel": "^3.1.13",
-    "jquery-iviewer": "./src/jquery.iviewer.js"
+    "iviewer": "^0.7.11"
   }
 }
