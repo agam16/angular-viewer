@@ -4,7 +4,7 @@
     "agam <agam@girnarsoft.com>"
   ],
   "description": "Angular version of the jQuery iViewer",
-  "main": "src/angular-viewer.js",
+  "main": ["src/angular-viewer.js", "src/css/angular.viewer.css"],
   "keywords": [
     "angular",
     "viewer",
