@@ -49,7 +49,7 @@ angular.module('angularViewer', []).directive('iViewer', function() {
             scope.viewerOptions.showToolbarButtons = typeof scope.viewerOptions.showToolbarButtons !== 'undefined' ? scope.viewerOptions.showToolbarButtons : true;
             scope.viewerOptions.startZoom = typeof scope.viewerOptions.startZoom !== 'undefined' ? scope.viewerOptions.startZoom : 'fit';
             //TODO Fix
-            scope.viewerOptions.minZoom = typeof scope.viewerOptions.minZoom !== 'undefined' ? scope.viewerOptions.startZoom : '75';
+            scope.viewerOptions.minZoom = typeof scope.viewerOptions.minZoom !== 'undefined' ? scope.viewerOptions.minZoom : '75';
             console.log(scope.viewerOptions)
         }
         initViewer = function() {
