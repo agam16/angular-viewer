@@ -8,7 +8,7 @@
  * @element EA
  *
  */
-angular.module('angularViewer', []).directive('iViewer', function() {
+angular.module('angularViewer', []).directive('iViewer', function($timeout) {
 
     /**
      * The angular return value required for the directive
@@ -49,7 +49,7 @@ angular.module('angularViewer', []).directive('iViewer', function() {
             scope.viewerOptions.showToolbarButtons = typeof scope.viewerOptions.showToolbarButtons !== 'undefined' ? scope.viewerOptions.showToolbarButtons : true;
             scope.viewerOptions.startZoom = typeof scope.viewerOptions.startZoom !== 'undefined' ? scope.viewerOptions.startZoom : 'fit';
             //TODO Fix
-            scope.viewerOptions.minZoom = typeof scope.viewerOptions.minZoom !== 'undefined' ? scope.viewerOptions.minZoom : '75';
+            scope.viewerOptions.minZoom = typeof scope.viewerOptions.minZoom !== 'undefined' ? scope.viewerOptions.minZoom : 'fit';
             console.log(scope.viewerOptions)
         }
         initViewer = function() {
@@ -64,8 +64,9 @@ angular.module('angularViewer', []).directive('iViewer', function() {
                 zoom: scope.viewerOptions.startZoom,
                 mousewheel: scope.viewerOptions.useMouseWheel
             });
+            // $(elem).iviewer('update')
         }
-        initViewer()
+        $timeout(initViewer, 1500);
     }
 
 
