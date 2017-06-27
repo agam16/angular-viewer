@@ -67,7 +67,10 @@ angular.module('angularViewer', []).directive('iViewer', function($timeout) {
             });
             $(elem).iviewer('update')
             scope.$watch('refreshManually', function (active) {
-                 $(elem).iviewer('update')
+                $timeout(function(){
+                    $(window).trigger('resize');
+                     $(elem).iviewer('fit')
+                }, 1000);
             });
         }
         $timeout(initViewer, 1500);
