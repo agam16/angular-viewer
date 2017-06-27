@@ -29,7 +29,8 @@ angular.module('angularViewer', []).directive('iViewer', function($timeout) {
         // Assign the angular scope attribute formatting
         scope: {
             viewerOptions: '=',
-            viewerFile: '='
+            viewerFile: '=',
+            refreshManually: '=',
         }
     };
 
@@ -64,7 +65,10 @@ angular.module('angularViewer', []).directive('iViewer', function($timeout) {
                 zoom: scope.viewerOptions.startZoom,
                 mousewheel: scope.viewerOptions.useMouseWheel
             });
-            // $(elem).iviewer('update')
+            $(elem).iviewer('update')
+            scope.$watch('refreshManually', function (active) {
+                 $(elem).iviewer('update')
+            });
         }
         $timeout(initViewer, 1500);
     }
